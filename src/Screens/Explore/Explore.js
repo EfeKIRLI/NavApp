@@ -1,12 +1,16 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View,Text } from "react-native";
+import style from "./style";
 
-const Explore = () => {
+
+const Explore = () =>  { 
   return (
-    <View>
-      <Text>Explore</Text>
+    <View style={style.container}> 
+      <Text> 
+        EXPLORE
+      </Text>
     </View>
   )
 }
 
-export default Explore
+export default Explore;
