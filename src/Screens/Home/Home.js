@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable, Button, Alert, FlatList, TextInput } from "react-native";
 import style from '../Home/style'
 import navigationsStrings from "../../constants/navigationsStrings";
+import Header from "../../Components/Header";
+import {
+    SafeAreaView,
+    SafeAreaProvider,
+    SafeAreaInsetsContext,
+    useSafeAreaInsets,
+} from 'react-native-safe-area-context';
+
 
 
 const Home = ({ navigation }) => {
@@ -17,11 +25,11 @@ const Home = ({ navigation }) => {
     const [searchText, setSearchText] = useState('')
     const [newText, setNewText] = useState('')
 
-    const addNewText = () => { 
+    const addNewText = () => {
         setSearchText([...ethics, newText])
         setNewText("")
     }
-    
+
 
     const filteredEpistemology = epistemology.filter(epis => epis.includes(searchText))
 
@@ -29,17 +37,19 @@ const Home = ({ navigation }) => {
         // navigation.replace(navigationsStrings.PROFILE, { title: 'Subscribe!' })
         // navigation.push(navigationsStrings.PROFILE, { title: 'Subscribe!' })
         navigation.navigate(navigationsStrings.PROFILE, { title: 'Subscribe!' })
-        Alert.alert('dsfds')
+        Alert.alert('Keep Going Well')
     }
 
     console.log(navigation)
     return (
         <View style={style.container}>
+            <SafeAreaView>
             <View>
                 <Text>This is "HOME" screen </Text>
                 <Pressable>
                     <Text>I'm pressable! Add item</Text>
                 </Pressable>
+                <Header goBack={() => navigation.goBack()} />
             </View>
 
             <View style={style.profileButtonContainer}>
@@ -47,53 +57,11 @@ const Home = ({ navigation }) => {
                     style={style.profileButton}
                     title="Go To Profile"
                     onPress={(goToScreen)}
-                //     {
-                //     navigation.navigate(navigationsStrings.PROFILE)
-                //     Alert.alert('dsfds')
-                // }
 
-                // onPress={() => alert('MY FIRST ALER')}
-                // disabled={true}
-                />
-                {/* <View style={style.listItem}>
-                    <FlatList
-                        data={fruits}
-                        renderItem={({ item }) => <Text> {item}</Text>}
-                    />
-                </View> */}
-                {/* <View style={style.Filter}>  
-                    <TextInput
-                    style={style.TextInput}
-                    onChangeText={setSearchText}
-                    value={searchText}
-                    placeholder="Search Something..."
-                    
-                    />
-
-                    <FlatList 
-                    data={filteredEpistemology}
-                    renderItem={({item})=> <Text> {item} </Text>}
-                    /> 
-                    <TextInput
-                    style={style.TextInput}
-                    onChangeText={setNewText}
-                    value={newText}
-                    placeholder="Add Something..."
-                    
-                    />
-
-                    <FlatList 
-                    data={filteredEpistemology}
-                    renderItem={({item})=> <Text> {item} </Text>}
-                    /> 
-
-
-                <Button 
-                title="Add Item"
-                onPress={addNewText}
-                />
-                </View> */}
+                />    
+               
             </View>
+            </SafeAreaView>
         </View>
     )
 }
@@ -207,3 +175,54 @@ onPress={(MyFirsOwnTransitionScreen)}  />
 style={}
 title="dfds"
 onPress={(MyFirsOwnTransitionScreen)} /> */}
+
+
+
+
+// =====================
+ //     {
+                //     navigation.navigate(navigationsStrings.PROFILE)
+                //     Alert.alert('dsfds')
+                // }
+
+                // onPress={() => alert('MY FIRST ALER')}
+                // disabled={true}
+                
+                {/* <View style={style.listItem}>
+                    <FlatList
+                        data={fruits}
+                        renderItem={({ item }) => <Text> {item}</Text>}
+                    />
+                </View>  */}
+                {/* <View style={style.Filter}>  
+                    <TextInput
+                    style={style.TextInput}
+                    onChangeText={setSearchText}
+                    value={searchText}
+                    placeholder="Search Something..."
+                    
+                    />
+
+                    <FlatList 
+                    data={filteredEpistemology}
+                    renderItem={({item})=> <Text> {item} </Text>}
+                    /> 
+                    <TextInput
+                    style={style.TextInput}
+                    onChangeText={setNewText}
+                    value={newText}
+                    placeholder="Add Something..."
+                    
+                    />
+
+                    <FlatList 
+                    data={filteredEpistemology}
+                    renderItem={({item})=> <Text> {item} </Text>}
+                    /> 
+
+
+                <Button 
+                title="Add Item"
+                onPress={addNewText}
+                />
+                </View>  */}

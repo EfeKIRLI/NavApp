@@ -5,9 +5,9 @@ const style = StyleSheet.create({
     container: {
         // flexDirection:'row',
         flex: 1,
-        flexDirection:'row',
-        justifyContent: 'center',
-        alignItems: 'center',
+        flexDirection:'column',
+        // justifyContent: 'space-evenly',
+        // alignItems: 'center',
         backgroundColor:'yellow'
 
 

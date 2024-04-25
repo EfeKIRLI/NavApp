@@ -3,6 +3,8 @@ import React from 'react'
 import { View, Text, Button, Pressable } from 'react-native'
 import style from './style'
 import navigationsStrings from '../../constants/navigationsStrings'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import  Header  from '../../Components/Header'
 
 //navigation: Bu prop, React Native uygulamasında ekranlar arasında gezinmek için yöntemler sağlayan navigasyon nesnesini ifade eder.
 
@@ -18,6 +20,9 @@ const Profile = ({ navigation, route }) => {
   console.log('routes', route.params.title)
   return (
     <View style={style.container}>
+      <SafeAreaView>
+
+        <Header />
       <Text>PROFILE</Text>
       <Text>This is Params data: {title}</Text>
       <Pressable
@@ -25,10 +30,11 @@ const Profile = ({ navigation, route }) => {
         <Text style={{ color: 'blue', fontSize: 20 }}>Go To Explore </Text>
       </Pressable >
 
-      <Pressable 
-      onPress={()=> navigation.goBack()}>
+      <Pressable
+        onPress={() => navigation.goBack()}>
         <Text style={{ color: 'blue', fontSize: 20 }}> Go Back </Text>
       </Pressable>
+      </SafeAreaView>
     </View>
   )
 }
