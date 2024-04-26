@@ -16,7 +16,7 @@ const Routes = () => {
             // screenOptions={{presentation:'transparentModal'}}
             // screenOptions={{presentation:'containedTransparentModal'}}
             // screenOptions={{presentation:'fullScreenModal'}}
-            screenOptions={{presentation:'card', headerShown:false}}
+            // screenOptions={{presentation:'card', headerShown:false}}
             initialRouteName={navigationsStrings.HOME} 
             >
             {/* <Stack.Navigator initialRouteName="Home" > */}
