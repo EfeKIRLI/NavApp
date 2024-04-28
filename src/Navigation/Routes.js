@@ -6,8 +6,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import Profile from '../Screens/Profile/Profile';
 import { Home,Profile, Explore } from '../Screens';
 import navigationsStrings from '../constants/navigationsStrings';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MainStack from './MainStack';
 
 const Stack = createNativeStackNavigator(); // fonksiyonu, yığın tabanlı bir navigasyon sistemi oluşturur.
+
+// const Tab = createBottomTabNavigator();
+
 
 const Routes = () => {
     return (
@@ -19,10 +24,11 @@ const Routes = () => {
             // screenOptions={{presentation:'card', headerShown:false}}
             initialRouteName={navigationsStrings.HOME} 
             >
+                {MainStack(Stack)}
             {/* <Stack.Navigator initialRouteName="Home" > */}
-                <Stack.Screen name={navigationsStrings.PROFILE} component={Profile } />
+                {/* <Stack.Screen name={navigationsStrings.PROFILE} component={Profile } />
                 <Stack.Screen options={{title:'MyUpdatedHome'}} name={navigationsStrings.HOME} component={Home } />
-                <Stack.Screen name={navigationsStrings.EXPLORE} component={Explore } />
+                <Stack.Screen name={navigationsStrings.EXPLORE} component={Explore } /> */}
 
                 {/* <Stack.Screen name="Home" component={Home } />
                 <Stack.Screen name="Profile" component={Profile } />

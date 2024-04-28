@@ -49,7 +49,7 @@ const Home = ({ navigation }) => {
                 <Pressable>
                     <Text>I'm pressable! Add item</Text>
                 </Pressable>
-                <Header goBack={() => navigation.goBack()} />
+                {/* <Header goBack={() => navigation.goBack()} /> */}
             </View>
 
             <View style={style.profileButtonContainer}>

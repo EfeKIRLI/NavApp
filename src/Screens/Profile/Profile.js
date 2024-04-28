@@ -1,6 +1,6 @@
 //rnfe
 import React from 'react'
-import { View, Text, Button, Pressable } from 'react-native'
+import { View, Text, Button, Pressable, Alert } from 'react-native'
 import style from './style'
 import navigationsStrings from '../../constants/navigationsStrings'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -24,7 +24,7 @@ const Profile = ({ navigation, route }) => {
         <View style={style.header}>
           <Header
             goBack={() => {
-              navigation.goBack(), alert('I use top one go back button')
+              navigation.goBack(), Alert.alert('I use top one go back button') 
             }}
             text="Profile Screen"
             navigation={navigation}
@@ -32,7 +32,7 @@ const Profile = ({ navigation, route }) => {
         </View>
         <View style={style.content}>
           <Text>PROFILE</Text>
-          <Text>This is Params data: {title}</Text>
+          <Text >This is Params data: {title}</Text>
           <Pressable
             onPress={(goToScreen)}>
             <Text style={{ color: 'blue', fontSize: 20 }}>Go To Explore </Text>
