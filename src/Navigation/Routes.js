@@ -22,7 +22,7 @@ const Routes = () => {
             // screenOptions={{presentation:'containedTransparentModal'}}
             // screenOptions={{presentation:'fullScreenModal'}}
             // screenOptions={{presentation:'card', headerShown:false}}
-            initialRouteName={navigationsStrings.HOME} 
+            // initialRouteName={navigationsStrings.HOME} 
             >
                 {MainStack(Stack)}
             {/* <Stack.Navigator initialRouteName="Home" > */}

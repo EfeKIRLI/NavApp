@@ -35,7 +35,7 @@ const App = () => {
   return (
     <View style={{flex:1}}>
       <Routes/>
-      <Text>Open up App.js to start working on your app!</Text>
+      {/* <Text>Open up App.js to start working on your app!</Text> */}
       
      
     </View> 

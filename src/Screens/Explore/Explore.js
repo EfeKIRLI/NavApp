@@ -10,9 +10,10 @@ const Explore = ({navigation,route}) =>  {
 
   const goToScreen = () => { 
     // navigation.navigate(navigationsStrings.HOME,{title)
-    navigation.popToTop() //Navigates back to the very first screen (root screen) in the current navigation stack.
+    // navigation.popToTop() //Navigates back to the very first screen (root screen) in the current navigation stack.
     // console.log(route.params.title)
 
+    navigation.navigate(navigationsStrings.HOME)
   }
   return (
     <View style={style.container}> 
