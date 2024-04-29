@@ -24,7 +24,14 @@ const TabRoutes = () => {
                 tabBarActiveBackgroundColor: 'gray',
                 tabBarActiveTintColor: 'white',
                 tabBarInactiveBackgroundColor: 'white',
-                tabBarInactiveTintColor: 'gray'
+                tabBarInactiveTintColor: 'gray',
+                tabBarShowLabel:true,
+                tabBarStyle:{ 
+                    backgroundColor:'transparent',
+                    position:'absolute',
+                    borderRadius:50,
+                    marginHorizontal:1
+                }
 
             }}
         >
@@ -33,7 +40,10 @@ const TabRoutes = () => {
                 options={{
                     tabBarIcon: ({ focused }) => {
                         return (
-                            <Image source={imagePath.icHome} style={{ width: 40, height: 40 }} />
+                            <Image 
+                            source={imagePath.icHome} 
+                            style={{ tintColor: focused ? 'blue' : 'gray', 
+                            width: 40, height: 40 }} />
                         )
                     }
                 }}
@@ -43,7 +53,10 @@ const TabRoutes = () => {
                 options={{
                     tabBarIcon: ({ focused }) => {
                         return (
-                            <Image source={imagePath.icExplore} style={{ width: 30, height: 30 }} />
+                            <Image 
+                            source={imagePath.icExplore} 
+                            style={{ tintColor: focused ? 'blue' : 'gray',
+                             width: 30, height: 30 }} />
                         )
                     }
                 }}
@@ -52,7 +65,10 @@ const TabRoutes = () => {
                 options={{
                     tabBarIcon: ({ focused }) => {
                         return (
-                            <Image source={imagePath.icProfile} style={{ width: 30, height: 30 }} />
+                            <Image 
+                            source={imagePath.icProfile} 
+                            style={{ tintColor: focused ? 'blue' : 'gray', 
+                            width: 30, height: 30 }} />
                         )
                     }
                 }}
