@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Pressable, Button, Alert, FlatList, TextInput } from "react-native";
+import { View, Text, StyleSheet, Pressable, Button, Alert, FlatList, TextInput, TouchableOpacity } from "react-native";
 import style from '../Home/style'
 import navigationsStrings from "../../constants/navigationsStrings";
 import Header from "../../Components/Header";
+import ButtonCom from "../../Components/ButtonCom";
 import {
     SafeAreaView,
     SafeAreaProvider,
@@ -40,27 +41,36 @@ const Home = ({ navigation }) => {
         Alert.alert('Keep Going Well')
     }
 
+    const goToProductDetails = () => {
+        navigation.navigate(navigationsStrings.PRODUCT_DETAILS)
+    }
+
     console.log(navigation)
     return (
         <View style={style.container}>
             <SafeAreaView>
-            <View>
-                <Text>This is "HOME" screen </Text>
-                <Pressable>
-                    <Text>I'm pressable! Add item</Text>
-                </Pressable>
-                {/* <Header goBack={() => navigation.goBack()} /> */}
-            </View>
+                <View>
+                    <Text>This is "HOME" screen </Text>
+                    <Pressable>
+                        <Text>I'm pressable! Add item</Text>
+                    </Pressable>
+                    {/* <Header goBack={() => navigation.goBack()} /> */}
+                </View>
 
-            <View style={style.profileButtonContainer}>
-                <Button
-                    style={style.profileButton}
-                    title="Go To Profile"
-                    onPress={(goToScreen)}
+                <View style={style.profileButtonContainer}>
+                    <Button
+                        style={style.profileButton}
+                        title="Go To Profile"
+                        onPress={(goToScreen)}
 
-                />    
-               
-            </View>
+                    />
+                    <Header text='Home' />
+                </View>
+                <View>
+                    <ButtonCom
+                        onPress={(goToProductDetails)}
+                    />
+                </View>
             </SafeAreaView>
         </View>
     )
@@ -180,21 +190,21 @@ onPress={(MyFirsOwnTransitionScreen)} /> */}
 
 
 // =====================
- //     {
-                //     navigation.navigate(navigationsStrings.PROFILE)
-                //     Alert.alert('dsfds')
-                // }
+//     {
+//     navigation.navigate(navigationsStrings.PROFILE)
+//     Alert.alert('dsfds')
+// }
 
-                // onPress={() => alert('MY FIRST ALER')}
-                // disabled={true}
-                
-                {/* <View style={style.listItem}>
+// onPress={() => alert('MY FIRST ALER')}
+// disabled={true}
+
+{/* <View style={style.listItem}>
                     <FlatList
                         data={fruits}
                         renderItem={({ item }) => <Text> {item}</Text>}
                     />
                 </View>  */}
-                {/* <View style={style.Filter}>  
+{/* <View style={style.Filter}>  
                     <TextInput
                     style={style.TextInput}
                     onChangeText={setSearchText}

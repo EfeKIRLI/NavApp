@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, ToastAndroid } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import Home from '../Screens/Home/Home';
@@ -27,10 +27,10 @@ const TabRoutes = () => {
                 tabBarInactiveTintColor: 'gray',
                 tabBarShowLabel:true,
                 tabBarStyle:{ 
-                    backgroundColor:'transparent',
-                    position:'absolute',
-                    borderRadius:50,
-                    marginHorizontal:1
+                    backgroundColor:'#ADD8E6',
+                    // position:'absolute',
+                    // borderRadius:50,
+                    // marginHorizontal:1
                 }
 
             }}
@@ -82,4 +82,4 @@ export default TabRoutes;
 
 
 
-
+    

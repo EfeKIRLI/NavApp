@@ -9,17 +9,17 @@ const Header = ({ goBack = () => { }, text }) => {
 
     return (
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', height: 40 }}>
-            <TouchableOpacity
+            { !! goBack ? <TouchableOpacity
                 // onPress={() => navigation.goBack()}
                 // onPress={goBack}
                 // onPress={() => navigation.goBack()}
                 onPress={!!goBack ? goBack : () => navigation.goBack()}
             >
-                <Text style={{ backgroundColor: 'white', width: '80%' }}> Go Back From Header </Text>
+                <Text style={{ backgroundColor: 'white', width: '80%'  }}> Go Back From Header </Text>
 
-            </TouchableOpacity>
+            </TouchableOpacity> : <Text />}
 
-            <Text>Welcome to Header Component! </Text>
+            <Text style={{color:'white', fontSize:16}} >Welcome to Header Component! </Text>
         </View>
     )
 }
