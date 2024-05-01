@@ -5,14 +5,23 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import Home from '../Screens/Home/Home';
 // import Profile from '../Screens/Profile/Profile';
-import { Home, Profile, Explore } from '../Screens';
+import { Home, Profile, Explore, ProductDetails } from '../Screens';
 import navigationsStrings from '../constants/navigationsStrings';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import imagePath from '../constants/imagePath';
 
 
-
+const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator();
+
+function HomeStack() {
+    return (
+      <Stack.Navigator screenOptions={{headerShown:true}}>
+        <Stack.Screen name={navigationsStrings.HOME} component={Home} />
+        <Stack.Screen name={navigationsStrings.PRODUCT_DETAILS} component={ProductDetails} />
+      </Stack.Navigator>
+    );
+  }
 
 
 const TabRoutes = () => {
@@ -20,7 +29,7 @@ const TabRoutes = () => {
         <Tab.Navigator
             initialRouteName={navigationsStrings.HOME}
             screenOptions={{
-                headerShown: true,
+                headerShown: false,
                 tabBarActiveBackgroundColor: 'gray',
                 tabBarActiveTintColor: 'white',
                 tabBarInactiveBackgroundColor: 'white',
@@ -36,7 +45,7 @@ const TabRoutes = () => {
             }}
         >
 
-            <Tab.Screen name={navigationsStrings.HOME} component={Home}
+            <Tab.Screen name={navigationsStrings.HOME} component={HomeStack}
                 options={{
                     tabBarIcon: ({ focused }) => {
                         return (

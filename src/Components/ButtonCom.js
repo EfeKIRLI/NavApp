@@ -2,13 +2,13 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-const ButtonCom = () => {
+const ButtonCom = ({refund}) => {
     return (
         <View>
-            <TouchableOpacity 
-            
-            style={style.ProductDetails} >
-                <Text style={{ fontSize:16 }} > Product Details</Text>
+            <TouchableOpacity
+                onPress={refund}
+                style={style.ProductDetails} >
+                <Text style={{ fontSize: 16 }} > Product Details</Text>
             </TouchableOpacity>
         </View>
     )

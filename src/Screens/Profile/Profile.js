@@ -16,6 +16,10 @@ const Profile = ({ navigation, route }) => {
     navigation.navigate(navigationsStrings.EXPLORE, { title })
   }
 
+  const goToEditProfile = () => { 
+    navigation.navigate(navigationsStrings.EDIT_PROFILE)
+  }
+
   // const {navigation, route} = props
   console.log('routes', route.params.title)
   return (
@@ -42,6 +46,11 @@ const Profile = ({ navigation, route }) => {
             onPress={() => navigation.goBack()}>
             <Text style={{ color: 'blue', fontSize: 20 }}> Go Back </Text>
           </Pressable>
+
+          <Button 
+          title='Edit Profile'
+          onPress={(goToEditProfile)}
+          />
         </View>
       </SafeAreaView>
     </View>

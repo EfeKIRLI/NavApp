@@ -68,7 +68,8 @@ const Home = ({ navigation }) => {
                 </View>
                 <View>
                     <ButtonCom
-                        onPress={(goToProductDetails)}
+                        refund={(goToProductDetails)}
+                        
                     />
                 </View>
             </SafeAreaView>

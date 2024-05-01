@@ -4,6 +4,6 @@ export default {
     EXPLORE:'Explore',
     TABS:'TabRoutes ',
     PRODUCT_DETAILS:"ProductDetails",
-    SEARCH:'Search',
+    SEARCHH:'Searchh',
     EDIT_PROFILE:"EditProfile"
 }
