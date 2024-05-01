@@ -10,18 +10,18 @@ import Header from '../../Components/Header'
 
 //route: Bu prop, geçerli ekran hakkında adı, parametreleri ve gezinme geçmişi gibi bilgileri içeren geçerli rota nesnesini temsil eder.
 const Profile = ({ navigation, route }) => {
-  const { title } = route.params
+  // const { title } = route.params
 
   const goToScreen = () => {
-    navigation.navigate(navigationsStrings.EXPLORE, { title })
+    navigation.navigate(navigationsStrings.EXPLORE)
   }
 
   const goToEditProfile = () => { 
-    navigation.navigate(navigationsStrings.EDIT_PROFILE)
+    navigation.navigate(navigationsStrings.EDIT_PROFILE )
   }
 
   // const {navigation, route} = props
-  console.log('routes', route.params.title)
+  // console.log('routes', route.params.title)
   return (
     <View style={style.container}>
       <SafeAreaView>
@@ -36,7 +36,7 @@ const Profile = ({ navigation, route }) => {
         </View>
         <View style={style.content}>
           <Text>PROFILE</Text>
-          <Text >This is Params data: {title}</Text>
+          <Text >This is Params data: </Text>
           <Pressable
             onPress={(goToScreen)}>
             <Text style={{ color: 'blue', fontSize: 20 }}>Go To Explore </Text>

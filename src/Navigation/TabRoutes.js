@@ -9,20 +9,10 @@ import { Home, Profile, Explore, ProductDetails } from '../Screens';
 import navigationsStrings from '../constants/navigationsStrings';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import imagePath from '../constants/imagePath';
+import HomeStack from './HomeStack';
 
 
-const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator();
-
-function HomeStack() {
-    return (
-      <Stack.Navigator screenOptions={{headerShown:true}}>
-        <Stack.Screen name={navigationsStrings.HOME} component={Home} />
-        <Stack.Screen name={navigationsStrings.PRODUCT_DETAILS} component={ProductDetails} />
-      </Stack.Navigator>
-    );
-  }
-
 
 const TabRoutes = () => {
     return (
