@@ -9,9 +9,9 @@ const MainStack = (Stack) => {
   return (
     <>
     <Stack.Screen name={navigationsStrings.TABS} component={TabRoutes} />
-    <Stack.Screen name={navigationsStrings.PRODUCT_DETAILS} component={ProductDetails} />
+    {/* <Stack.Screen name={navigationsStrings.PRODUCT_DETAILS} component={ProductDetails} />
     <Stack.Screen name={navigationsStrings.SEARCHH} component={Searchh} />
-    <Stack.Screen name={navigationsStrings.EDIT_PROFILE} component={EditProfile} />
+    <Stack.Screen name={navigationsStrings.EDIT_PROFILE} component={EditProfile} /> */}
     </>
   );
 }

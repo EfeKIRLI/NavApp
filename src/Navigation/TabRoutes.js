@@ -10,6 +10,9 @@ import navigationsStrings from '../constants/navigationsStrings';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import imagePath from '../constants/imagePath';
 import HomeStack from './HomeStack';
+import ExploreStack from './ExploreStack';
+import ProfileStack from './ProfileStack';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -48,7 +51,7 @@ const TabRoutes = () => {
                 }}
             />
 
-            <Tab.Screen name={navigationsStrings.EXPLORE} component={Explore}
+            <Tab.Screen name={navigationsStrings.EXPLORE} component={ExploreStack}
                 options={{
                     tabBarIcon: ({ focused }) => {
                         return (
@@ -60,7 +63,7 @@ const TabRoutes = () => {
                     }
                 }}
             />
-            <Tab.Screen name={navigationsStrings.PROFILE} component={Profile}
+            <Tab.Screen name={navigationsStrings.PROFILE} component={ProfileStack}
                 options={{
                     tabBarIcon: ({ focused }) => {
                         return (

@@ -38,6 +38,9 @@ const Home = ({ navigation }) => {
         // navigation.replace(navigationsStrings.PROFILE, { title: 'Subscribe!' })
         // navigation.push(navigationsStrings.PROFILE, { title: 'Subscribe!' })
         navigation.navigate(navigationsStrings.PROFILE, { title: 'Subscribe!' })
+        navigation.navigate(navigationsStrings.PROFILE, {
+            screen:navigationsStrings.EDIT_PROFILE , params: {user:'Efe'}
+        }, { title: 'Subscribe!' })
         Alert.alert('Keep Going Well')
     }
 
